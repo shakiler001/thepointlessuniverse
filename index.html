@@ -40,7 +40,35 @@ h2{font-size:clamp(28px,4vw,42px);margin-bottom:28px}
 .cert b{font:800 22px "Archivo",Arial,sans-serif;display:block;margin:6px 0}
 .cert em{color:var(--red);font-style:normal}
 footer{border-top:2px solid var(--fg);padding:28px 0 48px;color:var(--muted);font-size:15px}
+.depts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px}.depts h3{font:800 20px "Archivo",Arial,sans-serif;margin:0 0 8px}.depts p{margin:0;color:var(--muted);font-size:16px}
+.ledger .no.tag{color:var(--fg)}
+.tree{padding-top:4px}
+.tree .root{display:inline-block;background:var(--fg);color:var(--bg);padding:10px 18px;font:800 20px "Archivo",Arial,sans-serif}
+.branches{list-style:none;margin:0 0 0 22px;padding:0 0 0 28px;border-left:2px solid var(--fg)}
+.branches>li{position:relative;padding:18px 0 4px}
+.branches>li::before{content:"";position:absolute;left:-28px;top:34px;width:28px;border-top:2px solid var(--fg)}
+.branches>li:last-child::after{content:"";position:absolute;left:-30px;top:36px;bottom:0;width:6px;background:var(--bg)}
+.tree .div{display:inline-block;background:var(--red);color:#fff;padding:4px 14px;font:800 18px "Archivo",Arial,sans-serif}
+.leaves{list-style:none;margin:10px 0 6px 16px;padding:0 0 0 22px;border-left:1px dashed var(--muted)}
+.leaves li{position:relative;padding:2px 0;font-size:16px;line-height:1.5}
+.leaves li::before{content:"";position:absolute;left:-22px;top:14px;width:14px;border-top:1px dashed var(--muted)}
+.leaves li:last-child::after{content:"";position:absolute;left:-24px;top:15px;bottom:0;width:4px;background:var(--bg)}
 @media (max-width:760px){.hero,.submit{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.stamp{max-width:300px}.ledger li{grid-template-columns:70px 1fr}.ledger .res{grid-column:2;justify-self:start}}
+@media (min-width:901px){
+.tree{text-align:center}
+.tree .root{position:relative}
+.tree .root::after{content:"";position:absolute;left:50%;top:100%;height:22px;border-left:2px solid var(--fg)}
+.branches{display:grid;grid-template-columns:repeat(5,1fr);gap:0 10px;margin:22px 0 0;padding:0;border-left:0;text-align:center}
+.branches>li{padding:24px 0 4px}
+.branches>li::before{left:-5px;right:-5px;top:0;width:auto;border-top:2px solid var(--fg)}
+.branches>li:first-child::before{left:50%}
+.branches>li:last-child::before{right:50%}
+.branches>li::after,.branches>li:last-child::after{content:"";position:absolute;left:50%;top:0;bottom:auto;height:24px;width:0;border-left:2px solid var(--fg);background:none}
+.leaves{text-align:left;margin:10px 0 6px 4px;padding-left:18px}
+.leaves li{font-size:14px}
+.leaves li::before{left:-18px;width:12px}
+.leaves li:last-child::after{left:-20px}
+}
 </style>
 </head>
 <body>
@@ -48,8 +76,8 @@ footer{border-top:2px solid var(--fg);padding:28px 0 48px;color:var(--muted);fon
 <div class="hero">
 <div>
 <h1>Nothing urgent. Nothing important. Fully verified.</h1>
-<p>The Pointless Universe is a Facebook page that investigates, builds and reports on things that don't matter. Every case is handled with complete seriousness. Every case ends the same way: nothing changed.</p>
-<div class="btns"><a class="btn main" href="#" id="follow">Follow on Facebook</a><a class="btn" href="#submit">Submit a case</a></div>
+<p>The Pointless Universe is a world of departments that investigate, build and report on things that don't matter. Every case is handled with complete seriousness. Every case ends the same way: nothing changed.</p>
+<div class="btns"><a class="btn main" href="#" id="yt">Watch on YouTube</a><a class="btn" href="#" id="fb">Follow on Facebook</a></div>
 </div>
 <svg class="stamp" viewBox="0 0 340 340" role="img" aria-label="The Pointless Universe official stamp: Verified Pointless, established never, number 0001">
 <defs><path id="top" d="M40 170 A130 130 0 0 1 300 170" fill="none"/><path id="bot" d="M28 170 A142 142 0 0 0 312 170" fill="none"/></defs>
@@ -86,6 +114,30 @@ footer{border-top:2px solid var(--fg);padding:28px 0 48px;color:var(--muted);fon
 </section>
 
 <section>
+<h2>Where to find us</h2>
+<ul class="ledger">
+<li><span class="no tag">First</span><span><b>YouTube</b><small>Full case files, compilations and long investigations</small></span></li>
+<li><span class="no tag">First</span><span><b>Facebook</b><small>Daily Reels, Case File posts and community cases</small></span></li>
+<li><span class="no tag">Next</span><span><b>Instagram</b><small>Short clips, stamps and memes</small></span></li>
+<li><span class="no tag">Later?</span><span><b>LinkedIn</b><small>Memos and announcements from Pointless Corporate</small></span></li>
+</ul>
+</section>
+
+<section>
+<h2>The departments</h2>
+<div class="tree">
+<div class="root">The Pointless Universe</div>
+<ul class="branches">
+<li><span class="div">Investigation</span><ul class="leaves"><li>Investigation unit</li><li>Science lab</li><li>Research unit</li><li>Forensics</li><li>Weather bureau</li><li>Space agency</li><li>Archives</li><li>Lost and found</li></ul></li>
+<li><span class="div">Home and build</span><ul class="leaves"><li>Engineering</li><li>Household affairs</li><li>Kitchen unit</li><li>Transport dept</li><li>Construction</li><li>Garden dept</li></ul></li>
+<li><span class="div">Media</span><ul class="leaves"><li>News network</li><li>Comedy</li><li>Memes</li><li>Sports federation</li><li>Talk show</li><li>Radio</li><li>Cinema</li></ul></li>
+<li><span class="div">Corporate</span><ul class="leaves"><li>HR</li><li>Finance</li><li>Meetings</li><li>IT support</li><li>Legal</li><li>Marketing</li><li>Procurement</li><li>Training</li></ul></li>
+<li><span class="div">Society</span><ul class="leaves"><li>Parliament</li><li>Courts</li><li>Police</li><li>Customer care</li><li>School</li><li>Health dept</li><li>Tourism board</li><li>Museum</li><li>Awards</li></ul></li>
+</ul>
+</div>
+</section>
+
+<section>
 <h2>How a case works</h2>
 <div class="steps">
 <div><h3>We pick a case</h3><p>Something small, strange or completely unnecessary. You choose most of them.</p></div>
@@ -98,8 +150,8 @@ footer{border-top:2px solid var(--fg);padding:28px 0 48px;color:var(--muted);fon
 <div class="submit">
 <div>
 <h2>Got something that doesn't matter?</h2>
-<p>Send us your case in the comments on Facebook. The best one gets investigated in a video, and you receive an official Pointless Certificate.</p>
-<div class="btns"><a class="btn main" href="#" id="follow2">Submit on Facebook</a></div>
+<p>Send us your case in the comments on YouTube or Facebook. The best one gets investigated in a video, and you receive an official Pointless Certificate.</p>
+<div class="btns"><a class="btn main" href="#" id="yt2">Submit on YouTube</a><a class="btn" href="#" id="fb2">Submit on Facebook</a></div>
 </div>
 <div class="cert"><span>This certifies that</span><b>Your Name Here</b><span>has submitted a case of</span><b><em>no importance</em></b><span>Verified. Pointless. No. 0001.</span></div>
 </div>
