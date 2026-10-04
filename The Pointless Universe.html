@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Pointless Universe</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Special+Elite&display=swap">
+<style>
+:root{--bg:#F4EEDD;--fg:#1B2A49;--red:#C62828;--muted:#5B6479;--line:rgba(27,42,73,.28);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1730;--fg:#F4EEDD;--red:#E5484D;--muted:#A9B2C7;--line:rgba(244,238,221,.28)}}
+:root[data-theme="dark"]{--bg:#0E1730;--fg:#F4EEDD;--red:#E5484D;--muted:#A9B2C7;--line:rgba(244,238,221,.28)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 "Special Elite","Courier New",monospace}
+h1,h2{font-family:"Archivo","Helvetica Neue",Arial,sans-serif;font-weight:800;line-height:1.05;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center;padding:72px 0 64px}
+h1{font-size:clamp(40px,6.4vw,76px);letter-spacing:-.02em}
+.hero p{max-width:34em;margin:24px 0 32px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:14px 22px;font:500 17px "Archivo",Arial,sans-serif;text-decoration:none;border:2px solid var(--fg);color:var(--fg)}
+.btn.main{background:var(--red);border-color:var(--red);color:#fff}
+.btn:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.stamp{width:100%;max-width:400px;justify-self:center;transform:rotate(-6deg);animation:thump .7s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes thump{from{transform:rotate(-14deg) scale(1.5);opacity:0}to{transform:rotate(-6deg) scale(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.stamp{animation:none}}
+section{padding:56px 0;border-top:2px solid var(--fg)}
+h2{font-size:clamp(28px,4vw,42px);margin-bottom:28px}
+.ledger{list-style:none;margin:0;padding:0}
+.ledger li{display:grid;grid-template-columns:90px 1fr auto;gap:8px 24px;padding:18px 0;border-bottom:1px dashed var(--line);align-items:baseline}
+.ledger .no{color:var(--muted)}
+.ledger b{font:800 21px "Archivo",Arial,sans-serif;display:block}
+.ledger small{color:var(--muted);font-size:15px}
+.res{color:var(--red);border:2px solid var(--red);padding:2px 10px;font-size:14px;transform:rotate(-2deg);white-space:nowrap}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.steps h3{font:800 22px "Archivo",Arial,sans-serif;margin:0 0 8px}
+.steps p{margin:0}
+.submit{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.cert{border:3px double var(--fg);padding:24px;text-align:center}
+.cert b{font:800 22px "Archivo",Arial,sans-serif;display:block;margin:6px 0}
+.cert em{color:var(--red);font-style:normal}
+footer{border-top:2px solid var(--fg);padding:28px 0 48px;color:var(--muted);font-size:15px}
+@media (max-width:760px){.hero,.submit{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.stamp{max-width:300px}.ledger li{grid-template-columns:70px 1fr}.ledger .res{grid-column:2;justify-self:start}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="hero">
+<div>
+<h1>Nothing urgent. Nothing important. Fully verified.</h1>
+<p>The Pointless Universe is a Facebook page that investigates, builds and reports on things that don't matter. Every case is handled with complete seriousness. Every case ends the same way: nothing changed.</p>
+<div class="btns"><a class="btn main" href="#" id="follow">Follow on Facebook</a><a class="btn" href="#submit">Submit a case</a></div>
+</div>
+<svg class="stamp" viewBox="0 0 340 340" role="img" aria-label="The Pointless Universe official stamp: Verified Pointless, established never, number 0001">
+<defs><path id="top" d="M40 170 A130 130 0 0 1 300 170" fill="none"/><path id="bot" d="M28 170 A142 142 0 0 0 312 170" fill="none"/></defs>
+<g transform="translate(-170 -45)">
+<circle cx="340" cy="215" r="165" style="fill:none;stroke:var(--fg);stroke-width:7"/>
+<circle cx="340" cy="215" r="154" style="fill:none;stroke:var(--fg);stroke-width:1.5"/>
+<circle cx="340" cy="215" r="112" style="fill:none;stroke:var(--fg);stroke-width:3"/>
+<circle cx="340" cy="215" r="106" style="fill:none;stroke:var(--fg);stroke-width:1"/>
+<circle cx="340" cy="150" r="18" style="fill:var(--fg)"/>
+<ellipse cx="340" cy="150" rx="44" ry="11" transform="rotate(-15 340 150)" style="fill:none;stroke:var(--bg);stroke-width:8"/>
+<ellipse cx="340" cy="150" rx="44" ry="11" transform="rotate(-15 340 150)" style="fill:none;stroke:var(--fg);stroke-width:3"/>
+<path d="M252 184H428" style="fill:none;stroke:var(--fg);stroke-width:1.5"/>
+<polygon points="204,207 211,215 204,223 197,215" style="fill:var(--fg)"/>
+<polygon points="476,207 483,215 476,223 469,215" style="fill:var(--fg)"/>
+</g>
+<text style="fill:var(--fg);font:800 17px Archivo,Arial,sans-serif;letter-spacing:3.5px"><textPath href="#top" startOffset="50%" text-anchor="middle">THE POINTLESS UNIVERSE</textPath></text>
+<text style="fill:var(--fg);font:800 13px Archivo,Arial,sans-serif;letter-spacing:2.5px"><textPath href="#bot" startOffset="50%" text-anchor="middle">NOTHING URGENT · NOTHING IMPORTANT</textPath></text>
+<text x="170" y="162" text-anchor="middle" style="fill:var(--fg);font:800 20px Archivo,Arial,sans-serif;letter-spacing:8px">VERIFIED</text>
+<rect x="76" y="174" width="188" height="38" style="fill:var(--red)"/>
+<text x="170" y="201" text-anchor="middle" style="fill:#fff;font:800 22px Archivo,Arial,sans-serif;letter-spacing:4px">POINTLESS</text>
+<text x="170" y="235" text-anchor="middle" style="fill:var(--fg);font:800 12px Archivo,Arial,sans-serif;letter-spacing:4px">EST. NEVER</text>
+<text x="170" y="255" text-anchor="middle" style="fill:var(--fg);font:500 11px Archivo,Arial,sans-serif;letter-spacing:3px">NO. 0001</text>
+</svg>
+</div>
+
+<section>
+<h2>Recent cases</h2>
+<ul class="ledger">
+<li><span class="no">0001</span><span><b>The case of the slightly open door</b><small>Pointless Investigation Unit</small></span><span class="res">Closed. Nothing changed.</span></li>
+<li><span class="no">0002</span><span><b>A staircase to the first step</b><small>Pointless Engineering</small></span><span class="res">Closed. Nothing changed.</span></li>
+<li><span class="no">0003</span><span><b>Breaking: water is still wet</b><small>Pointless News Network</small></span><span class="res">Closed. Nothing changed.</span></li>
+<li><span class="no">0004</span><span><b>Who ate the last invisible biscuit?</b><small>Pointless Investigation Unit</small></span><span class="res">Closed. Nothing changed.</span></li>
+</ul>
+</section>
+
+<section>
+<h2>How a case works</h2>
+<div class="steps">
+<div><h3>We pick a case</h3><p>Something small, strange or completely unnecessary. You choose most of them.</p></div>
+<div><h3>We investigate seriously</h3><p>Official tone, careful evidence, dramatic music. Nobody laughs on camera.</p></div>
+<div><h3>We conclude nothing</h3><p>The stamp comes down. The case is closed. The universe carries on exactly as before.</p></div>
+</div>
+</section>
+
+<section id="submit">
+<div class="submit">
+<div>
+<h2>Got something that doesn't matter?</h2>
+<p>Send us your case in the comments on Facebook. The best one gets investigated in a video, and you receive an official Pointless Certificate.</p>
+<div class="btns"><a class="btn main" href="#" id="follow2">Submit on Facebook</a></div>
+</div>
+<div class="cert"><span>This certifies that</span><b>Your Name Here</b><span>has submitted a case of</span><b><em>no importance</em></b><span>Verified. Pointless. No. 0001.</span></div>
+</div>
+</section>
+</main>
+<footer><div class="wrap">The Pointless Universe. Established never. All rights reserved, though nobody has asked for them.</div></footer>
+</body>
+</html>
