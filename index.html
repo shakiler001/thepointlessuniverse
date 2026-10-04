@@ -3,17 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Pointless Universe</title>
+<title>The Pointless Universe - Nothing urgent. Nothing important.</title>
+<meta name="description" content="The Pointless Universe is a world of departments that investigate, build and report on things that don't matter. Every case ends the same way: nothing changed.">
+<meta property="og:title" content="The Pointless Universe">
+<meta property="og:description" content="Official records of things that don't matter. Est. never.">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800&family=Special+Elite&display=swap">
 <style>
 :root{--bg:#F4EEDD;--fg:#1B2A49;--red:#C62828;--muted:#5B6479;--line:rgba(27,42,73,.28);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1730;--fg:#F4EEDD;--red:#E5484D;--muted:#A9B2C7;--line:rgba(244,238,221,.28)}}
 :root[data-theme="dark"]{--bg:#0E1730;--fg:#F4EEDD;--red:#E5484D;--muted:#A9B2C7;--line:rgba(244,238,221,.28)}
 *{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html{scroll-padding-top:20px}
 body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 "Special Elite","Courier New",monospace}
-h1,h2{font-family:"Archivo","Helvetica Neue",Arial,sans-serif;font-weight:800;line-height:1.05;margin:0}
+h1,h2,h3{font-family:"Archivo","Helvetica Neue",Arial,sans-serif;font-weight:800;line-height:1.05;margin:0}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:2px solid var(--fg);font:800 13px "Archivo",Arial,sans-serif;letter-spacing:1.5px}
+.nav a{color:var(--fg);text-decoration:none;margin-left:18px}.nav a:hover{color:var(--red)}
 .hero{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center;padding:72px 0 64px}
 h1{font-size:clamp(40px,6.4vw,76px);letter-spacing:-.02em}
 .hero p{max-width:34em;margin:24px 0 32px}
@@ -23,7 +29,6 @@ h1{font-size:clamp(40px,6.4vw,76px);letter-spacing:-.02em}
 .btn:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 .stamp{width:100%;max-width:400px;justify-self:center;transform:rotate(-6deg);animation:thump .7s cubic-bezier(.2,.9,.3,1.2) both}
 @keyframes thump{from{transform:rotate(-14deg) scale(1.5);opacity:0}to{transform:rotate(-6deg) scale(1);opacity:1}}
-@media (prefers-reduced-motion:reduce){.stamp{animation:none}}
 section{padding:56px 0;border-top:2px solid var(--fg)}
 h2{font-size:clamp(28px,4vw,42px);margin-bottom:28px}
 .ledger{list-style:none;margin:0;padding:0}
@@ -40,8 +45,8 @@ h2{font-size:clamp(28px,4vw,42px);margin-bottom:28px}
 .cert b{font:800 22px "Archivo",Arial,sans-serif;display:block;margin:6px 0}
 .cert em{color:var(--red);font-style:normal}
 footer{border-top:2px solid var(--fg);padding:28px 0 48px;color:var(--muted);font-size:15px}
+.footer-links a{color:var(--muted);text-decoration:none;margin-right:16px;border-bottom:1px dashed var(--line)}
 .depts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px}.depts h3{font:800 20px "Archivo",Arial,sans-serif;margin:0 0 8px}.depts p{margin:0;color:var(--muted);font-size:16px}
-.ledger .no.tag{color:var(--fg)}
 .tree{padding-top:4px}
 .tree .root{display:inline-block;background:var(--fg);color:var(--bg);padding:10px 18px;font:800 20px "Archivo",Arial,sans-serif}
 .branches{list-style:none;margin:0 0 0 22px;padding:0 0 0 28px;border-left:2px solid var(--fg)}
@@ -52,46 +57,30 @@ footer{border-top:2px solid var(--fg);padding:28px 0 48px;color:var(--muted);fon
 .leaves{list-style:none;margin:10px 0 6px 16px;padding:0 0 0 22px;border-left:1px dashed var(--muted)}
 .leaves li{position:relative;padding:2px 0;font-size:16px;line-height:1.5}
 .leaves li::before{content:"";position:absolute;left:-22px;top:14px;width:14px;border-top:1px dashed var(--muted)}
-.leaves li:last-child::after{content:"";position:absolute;left:-24px;top:15px;bottom:0;width:4px;background:var(--bg)}
-@media (max-width:760px){.hero,.submit{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.stamp{max-width:300px}.ledger li{grid-template-columns:70px 1fr}.ledger .res{grid-column:2;justify-self:start}}
-@media (min-width:901px){
-.tree{text-align:center}
-.tree .root{position:relative}
-.tree .root::after{content:"";position:absolute;left:50%;top:100%;height:22px;border-left:2px solid var(--fg)}
-.branches{display:grid;grid-template-columns:repeat(5,1fr);gap:0 10px;margin:22px 0 0;padding:0;border-left:0;text-align:center}
-.branches>li{padding:24px 0 4px}
-.branches>li::before{left:-5px;right:-5px;top:0;width:auto;border-top:2px solid var(--fg)}
-.branches>li:first-child::before{left:50%}
-.branches>li:last-child::before{right:50%}
-.branches>li::after,.branches>li:last-child::after{content:"";position:absolute;left:50%;top:0;bottom:auto;height:24px;width:0;border-left:2px solid var(--fg);background:none}
-.leaves{text-align:left;margin:10px 0 6px 4px;padding-left:18px}
-.leaves li{font-size:14px}
-.leaves li::before{left:-18px;width:12px}
-.leaves li:last-child::after{left:-20px}
-}
+.legal{font:16px/1.7 "Archivo",Arial,sans-serif;color:var(--muted)} .legal h3{font-size:20px;color:var(--fg);margin:24px 0 8px} .legal p{margin:8px 0}
+@media (max-width:760px){.hero,.submit{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.stamp{max-width:300px}.ledger li{grid-template-columns:70px 1fr}.ledger .res{grid-column:2;justify-self:start}.nav{display:block}}
+@media (min-width:901px){.tree{text-align:center}.tree .root{position:relative}.tree .root::after{content:"";position:absolute;left:50%;top:100%;height:22px;border-left:2px solid var(--fg)}.branches{display:grid;grid-template-columns:repeat(5,1fr);gap:0 10px;margin:22px 0 0;padding:0;border-left:0;text-align:center}.branches>li{padding:24px 0 4px}.branches>li::before{left:-5px;right:-5px;top:0;width:auto;border-top:2px solid var(--fg)}.branches>li:first-child::before{left:50%}.branches>li:last-child::before{right:50%}.branches>li::after,.branches>li:last-child::after{content:"";position:absolute;left:50%;top:0;bottom:auto;height:24px;width:0;border-left:2px solid var(--fg);background:none}.leaves{text-align:left;margin:10px 0 6px 4px;padding-left:18px}.leaves li{font-size:14px}.leaves li::before{left:-18px;width:12px}}
 </style>
 </head>
 <body>
 <main class="wrap">
+<div class="nav">
+<div>THE POINTLESS UNIVERSE — NO. 0001</div>
+<div><a href="#">Home</a><a href="#departments">Departments</a><a href="#privacy">Privacy</a><a href="#contact">Contact</a></div>
+</div>
+
 <div class="hero">
 <div>
 <h1>Nothing urgent. Nothing important. Fully verified.</h1>
 <p>The Pointless Universe is a world of departments that investigate, build and report on things that don't matter. Every case is handled with complete seriousness. Every case ends the same way: nothing changed.</p>
-<div class="btns"><a class="btn main" href="https://www.youtube.com/@ThePointlessUniverse" id="yt">Watch on YouTube</a><a class="btn" href="#" id="fb">Follow on Facebook</a></div>
+<div class="btns"><a class="btn main" href="https://www.youtube.com/@ThePointlessUniverse">Watch on YouTube</a><a class="btn" href="https://facebook.com/thepointlessuniverse">Follow on Facebook</a></div>
 </div>
-<svg class="stamp" viewBox="0 0 340 340" role="img" aria-label="The Pointless Universe official stamp: Verified Pointless, established never, number 0001">
+<svg class="stamp" viewBox="0 0 340 340" role="img" aria-label="The Pointless Universe official stamp">
 <defs><path id="top" d="M40 170 A130 130 0 0 1 300 170" fill="none"/><path id="bot" d="M28 170 A142 142 0 0 0 312 170" fill="none"/></defs>
 <g transform="translate(-170 -45)">
 <circle cx="340" cy="215" r="165" style="fill:none;stroke:var(--fg);stroke-width:7"/>
 <circle cx="340" cy="215" r="154" style="fill:none;stroke:var(--fg);stroke-width:1.5"/>
 <circle cx="340" cy="215" r="112" style="fill:none;stroke:var(--fg);stroke-width:3"/>
-<circle cx="340" cy="215" r="106" style="fill:none;stroke:var(--fg);stroke-width:1"/>
-<circle cx="340" cy="150" r="18" style="fill:var(--fg)"/>
-<ellipse cx="340" cy="150" rx="44" ry="11" transform="rotate(-15 340 150)" style="fill:none;stroke:var(--bg);stroke-width:8"/>
-<ellipse cx="340" cy="150" rx="44" ry="11" transform="rotate(-15 340 150)" style="fill:none;stroke:var(--fg);stroke-width:3"/>
-<path d="M252 184H428" style="fill:none;stroke:var(--fg);stroke-width:1.5"/>
-<polygon points="204,207 211,215 204,223 197,215" style="fill:var(--fg)"/>
-<polygon points="476,207 483,215 476,223 469,215" style="fill:var(--fg)"/>
 </g>
 <text style="fill:var(--fg);font:800 17px Archivo,Arial,sans-serif;letter-spacing:3.5px"><textPath href="#top" startOffset="50%" text-anchor="middle">THE POINTLESS UNIVERSE</textPath></text>
 <text style="fill:var(--fg);font:800 13px Archivo,Arial,sans-serif;letter-spacing:2.5px"><textPath href="#bot" startOffset="50%" text-anchor="middle">NOTHING URGENT · NOTHING IMPORTANT</textPath></text>
@@ -103,60 +92,65 @@ footer{border-top:2px solid var(--fg);padding:28px 0 48px;color:var(--muted);fon
 </svg>
 </div>
 
-<section>
-<h2>Recent cases</h2>
-<ul class="ledger">
+<section><h2>Recent cases</h2><ul class="ledger">
 <li><span class="no">0001</span><span><b>The case of the slightly open door</b><small>Pointless Investigation Unit</small></span><span class="res">Closed. Nothing changed.</span></li>
 <li><span class="no">0002</span><span><b>A staircase to the first step</b><small>Pointless Engineering</small></span><span class="res">Closed. Nothing changed.</span></li>
 <li><span class="no">0003</span><span><b>Breaking: water is still wet</b><small>Pointless News Network</small></span><span class="res">Closed. Nothing changed.</span></li>
 <li><span class="no">0004</span><span><b>Who ate the last invisible biscuit?</b><small>Pointless Investigation Unit</small></span><span class="res">Closed. Nothing changed.</span></li>
-</ul>
-</section>
+</ul></section>
 
-<section>
-<h2>Where to find us</h2>
-<ul class="ledger">
-<li><span class="no tag">First</span><span><b>YouTube</b><small>Full case files, compilations and long investigations</small></span></li>
-<li><span class="no tag">First</span><span><b>Facebook</b><small>Daily Reels, Case File posts and community cases</small></span></li>
-<li><span class="no tag">Next</span><span><b>Instagram</b><small>Short clips, stamps and memes</small></span></li>
-<li><span class="no tag">Later?</span><span><b>LinkedIn</b><small>Memos and announcements from Pointless Corporate</small></span></li>
-</ul>
-</section>
-
-<section>
-<h2>The departments</h2>
+<section id="departments"><h2>The departments</h2>
 <div class="tree">
 <div class="root">The Pointless Universe</div>
 <ul class="branches">
-<li><span class="div">Investigation</span><ul class="leaves"><li>Investigation unit</li><li>Science lab</li><li>Research unit</li><li>Forensics</li><li>Weather bureau</li><li>Space agency</li><li>Archives</li><li>Lost and found</li></ul></li>
-<li><span class="div">Home and build</span><ul class="leaves"><li>Engineering</li><li>Household affairs</li><li>Kitchen unit</li><li>Transport dept</li><li>Construction</li><li>Garden dept</li></ul></li>
-<li><span class="div">Media</span><ul class="leaves"><li>News network</li><li>Comedy</li><li>Memes</li><li>Sports federation</li><li>Talk show</li><li>Radio</li><li>Cinema</li></ul></li>
-<li><span class="div">Corporate</span><ul class="leaves"><li>HR</li><li>Finance</li><li>Meetings</li><li>IT support</li><li>Legal</li><li>Marketing</li><li>Procurement</li><li>Training</li></ul></li>
-<li><span class="div">Society</span><ul class="leaves"><li>Parliament</li><li>Courts</li><li>Police</li><li>Customer care</li><li>School</li><li>Health dept</li><li>Tourism board</li><li>Museum</li><li>Awards</li></ul></li>
+<li><span class="div">Investigation</span><ul class="leaves"><li>Investigation unit</li><li>Science lab</li><li>Research unit</li><li>Forensics</li><li>Weather bureau</li></ul></li>
+<li><span class="div">Home and build</span><ul class="leaves"><li>Engineering</li><li>Household affairs</li><li>Kitchen unit</li><li>Transport dept</li></ul></li>
+<li><span class="div">Media</span><ul class="leaves"><li>News network</li><li>Comedy</li><li>Memes</li><li>Sports federation</li></ul></li>
+<li><span class="div">Corporate</span><ul class="leaves"><li>HR</li><li>Finance</li><li>Meetings</li><li>IT support</li></ul></li>
+<li><span class="div">Society</span><ul class="leaves"><li>Parliament</li><li>Courts</li><li>Customer care</li><li>Museum</li></ul></li>
 </ul>
 </div>
 </section>
 
-<section>
-<h2>How a case works</h2>
-<div class="steps">
-<div><h3>We pick a case</h3><p>Something small, strange or completely unnecessary. You choose most of them.</p></div>
-<div><h3>We investigate seriously</h3><p>Official tone, careful evidence, dramatic music. Nobody laughs on camera.</p></div>
-<div><h3>We conclude nothing</h3><p>The stamp comes down. The case is closed. The universe carries on exactly as before.</p></div>
+<section id="contact">
+<h2>Contact</h2>
+<div class="legal">
+<p><b>Brand email:</b> thepointlessuniversehq@gmail.com</p>
+<p>This is a content project producing original comedy investigation videos. For case submissions, send a message to our Facebook Page or YouTube comments. For business inquiries, use the email above.</p>
+<p>Location: Internet. Hours: Never urgent.</p>
 </div>
 </section>
 
-<section id="submit">
-<div class="submit">
-<div>
-<h2>Got something that doesn't matter?</h2>
-<p>Send us your case in the comments on YouTube or Facebook. The best one gets investigated in a video, and you receive an official Pointless Certificate.</p>
-<div class="btns"><a class="btn main" href="https://www.youtube.com/@ThePointlessUniverse" id="yt2">Submit on YouTube</a><a class="btn" href="#" id="fb2">Submit on Facebook</a></div>
-</div>
-<div class="cert"><span>This certifies that</span><b>Your Name Here</b><span>has submitted a case of</span><b><em>no importance</em></b><span>Verified. Pointless. No. 0001.</span></div>
+<section id="privacy">
+<h2>Privacy Policy</h2>
+<div class="legal">
+<p><small>Last updated: May 11, 2026</small></p>
+<h3>1. Overview</h3>
+<p>The Pointless Universe website does not collect personal data directly. We use third-party platforms (YouTube, Facebook, GitHub Pages) which may collect data per their own policies.</p>
+<h3>2. Cookies & Analytics</h3>
+<p>This site is hosted on GitHub Pages. GitHub may collect anonymized logs. If we add analytics in future, it will be disclosed here.</p>
+<h3>3. Embedded Content</h3>
+<p>Links to YouTube and Facebook may set cookies when you click them. Please review YouTube's and Facebook's privacy policies.</p>
+<h3>4. Your Data</h3>
+<p>We do not sell data. Case submissions sent via public comments are public. If you want a submission removed, contact us at thepointlessuniversehq@gmail.com.</p>
+<h3>5. Contact</h3>
+<p>For privacy questions: thepointlessuniversehq@gmail.com</p>
 </div>
 </section>
+
+<section id="terms">
+<h2>Terms & Disclosure</h2>
+<div class="legal">
+<h3>1. Content</h3>
+<p>All cases, certificates, and department reports are fictional and comedic. Any resemblance to real investigations is coincidental and pointless.</p>
+<h3>2. Originality</h3>
+<p>All videos and images are original productions of The Pointless Universe. We do not repost third-party watermarked content.</p>
+<h3>3. Monetization Disclosure</h3>
+<p>This site may display ads or affiliate links in the future. Facebook and YouTube may place ads on our content per their monetization programs.</p>
+</div>
+</section>
+
 </main>
-<footer><div class="wrap">The Pointless Universe. Established never. All rights reserved, though nobody has asked for them.</div></footer>
+<footer><div class="wrap"><div class="footer-links"><a href="#">Home</a><a href="#privacy">Privacy Policy</a><a href="#terms">Terms</a><a href="#contact">Contact</a><a href="https://www.youtube.com/@ThePointlessUniverse">YouTube</a><a href="https://facebook.com/thepointlessuniverse">Facebook</a></div><br>The Pointless Universe. Established never. All rights reserved, though nobody has asked for them. Case No. 0001. Closed. Nothing changed.</div></footer>
 </body>
 </html>
